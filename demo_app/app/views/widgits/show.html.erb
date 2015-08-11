@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @widgit.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @widgit.description %>
+</p>
+
+<%= link_to 'Edit', edit_widgit_path(@widgit) %> |
+<%= link_to 'Back', widgits_path %>

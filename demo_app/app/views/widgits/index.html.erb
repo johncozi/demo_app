@@ -1,0 +1,27 @@
+<h1>Listing widgits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @widgits.each do |widgit| %>
+      <tr>
+        <td><%= widgit.name %></td>
+        <td><%= widgit.description %></td>
+        <td><%= link_to 'Show', widgit %></td>
+        <td><%= link_to 'Edit', edit_widgit_path(widgit) %></td>
+        <td><%= link_to 'Destroy', widgit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Widgit', new_widgit_path %>
